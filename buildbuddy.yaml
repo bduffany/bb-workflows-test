@@ -1,0 +1,8 @@
+actions:
+  - name: Build and test (Mac)
+    os: darwin
+    triggers:
+      push: { branches: [ main ] }
+      pull_request: { branches: [ main ] }
+    bazel_commands:
+      - test //... --nocache_test_results
