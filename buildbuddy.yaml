@@ -1,6 +1,7 @@
 actions:
-  - name: Build and test (Mac)
+  - name: Build and test (M1 Mac)
     os: darwin
+    arch: arm64
     triggers:
       push: { branches: [ main ] }
       pull_request: { branches: [ main ] }
