@@ -1,12 +1,13 @@
 actions:
-  - name: Build and test
+  - name: Build and test (linux_amd64)
     triggers:
       push: { branches: [ main ] }
       pull_request: { branches: [ main ] }
     bazel_commands:
       - test //... --nocache_test_results
-  - name: Build and test (Mac)
+  - name: Build and test (darwin_arm64)
     os: darwin
+    arch: arm64
     triggers:
       push: { branches: [ main ] }
       pull_request: { branches: [ main ] }
